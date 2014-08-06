@@ -1,6 +1,7 @@
 include device/qcom/msm8610/BoardConfig.mk
 
 TARGET_NO_BOOTLOADER := true
+TARGET_NO_KERNEL := true
 
 TARGET_USES_TCT_FOTA := false
 TARGET_RECOVERY_FSTAB := device/t2m/flame/recovery.fstab
