@@ -143,6 +143,7 @@ COMMON_LIBS="
 	libloc_core.so
 	libloc_ds_api.so
 	libloc_eng.so
+	libmdmdetect.so
 	libmmcamera_interface.so
 	libmmjpeg_interface.so
 	libqomx_core.so

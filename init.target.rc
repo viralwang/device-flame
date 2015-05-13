@@ -177,3 +177,9 @@ service factory_test /system/bin/factory_test
    user root
    group root
 #[FEATURE]-Add-END by T2M.weiqing.cao
+
+service rilproxy1 /system/bin/rilproxy -c 1 -s rild2
+    class main
+    socket rilproxy1 stream 660 radio radio
+    user radio
+    group radio system
