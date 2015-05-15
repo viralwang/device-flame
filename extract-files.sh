@@ -148,6 +148,7 @@ COMMON_LIBS="
 	libmmjpeg_interface.so
 	libqomx_core.so
 	libsigchain.so
+	libxml2.so
 	"
 
 copy_files "$COMMON_LIBS" "system/lib" ""
