@@ -178,8 +178,23 @@ service factory_test /system/bin/factory_test
    group root
 #[FEATURE]-Add-END by T2M.weiqing.cao
 
+# NFC
+service nfcd /system/bin/nfcd
+    class main
+    oneshot
+    socket nfcd stream 660 nfc nfc
+    user nfc
+    group system
+
+on boot
+    mkdir /data/nfc 0700 nfc nfc
+    chown nfc nfc /dev/pn544
+    setprop ro.nfc.port "I2C"
 service rilproxy1 /system/bin/rilproxy -c 1 -s rild2
     class main
     socket rilproxy1 stream 660 radio radio
     user radio
     group radio system
+
+on boot
+   setprop persist.radio.apm_sim_not_pwdn 0
