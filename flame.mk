@@ -40,7 +40,8 @@ PRODUCT_PACKAGES += \
   nfcd \
   libaudioroute \
   libnfc-pn547 \
-  librecovery
+  librecovery \
+  bluetooth.default
 
 GAIA_DEV_PIXELS_PER_PX := 1.5
 

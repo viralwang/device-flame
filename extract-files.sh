@@ -137,6 +137,7 @@ copy_local_files()
 }
 
 COMMON_LIBS="
+	libbt-vendor.so
 	libcnefeatureconfig.so
 	libgps.utils.so
 	libloc_api_v02.so
