@@ -3,14 +3,17 @@ $(call inherit-product, device/qcom/msm8610/msm8610.mk)
 PRODUCT_COPY_FILES := \
     device/qcom/msm8610/audio_policy.conf:system/etc/audio_policy.conf \
     device/qcom/msm8610/media/media_codecs_8610.xml:system/etc/media_codecs.xml \
-    device/qcom/msm8610/media/media_profiles_8610.xml:system/etc/media_profiles.xml \
     device/qcom/msm8610/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     device/qcom/msm8610/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/qcom/msm8610/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin \
     device/t2m/flame/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     device/t2m/flame/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    device/t2m/flame/nfc/nfcee_access.xml:system/etc/nfcee_access.xml \
     device/t2m/flame/fstab.qcom:root/fstab.qcom \
     device/t2m/flame/init.target.rc:root/init.target.rc \
+    device/t2m/flame/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    device/t2m/flame/media_profiles.xml:system/etc/media_profiles.xml \
+    device/t2m/flame/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/t2m/flame/volume.cfg:system/etc/volume.cfg \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
@@ -38,6 +41,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGES += \
   nfcd \
+  nfc_nci.pn54x.default \
   libaudioroute \
   libnfc-pn547 \
   librecovery \
